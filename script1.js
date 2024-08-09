@@ -92,7 +92,7 @@ const portfolioCard = (item) => {
   const cardCat = item.title.split(" ")[0];
   return `
       <div class="shadow-lg shadow-gray-300/100 portfolioCard" id="${cardCat}">
-        <a href="#"><img src="${item.img}" alt="${item.title} image"></a>
+        <div href="#"><img src="${item.img}" alt="${item.title} image"></div>
         <div class="absolute bg-white bg-opacity-80 px-5 py-2 flex justify-between items-center ch bottom-0 left-3 right-3 transition-all duration-300 opacity-0">
           <div>
             <h4 class="font-semibold text-xl">${item.title}</h4>
@@ -186,12 +186,12 @@ const pricingData = [
   ]
     const faqCard = (item,i) =>{
         return `
-        <div class="faqCard border flex flex-col gap-3 px-2 pt-3 ">
-      <button class="${i == 0 && "text-blue-600"} duration-500 text-md lg:text-lg hover:text-blue-600 flex justify-between items-center gap-5 lg:gap-0 w-full" onclick="toggleFaq(this)">
+        <div class="faqCard border flex flex-col gap-3 px-1 md:px-3 pt-3 ">
+      <button class="${i == 0 && "text-blue-600"} duration-500 text-[11px] sm:text-md lg:text-lg hover:text-blue-600 flex justify-between items-center gap-5 lg:gap-0 w-full" onclick="toggleFaq(this)">
         <h1>${i+1}. ${item.title}</h1>
         <i class="fa-solid fa-angle-right icon duration-500 ${i == 0 && "rotate-90"}"></i>
       </button>
-      <div class="faqDiv overflow-y-auto  h-0 ${i == 0 && "h-[75px]"}  duration-500 " id="nav">
+      <div class="faqDiv overflow-y-auto  h-0 ${i == 0 && "h-[75px]"}  duration-500 text-[11px] md:text-md lg:text-lg" id="nav">
         ${item.desc}
       </div>
     </div>`}
