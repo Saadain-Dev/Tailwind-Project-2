@@ -213,7 +213,7 @@ img:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=for
 name:"Babar Shaikh",
 work:"Engineer",
 desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
-img:"https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D"
+img:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
 },
   {
 name:"Alina Shaikh",
@@ -244,13 +244,17 @@ const testimonalSlideCard = (item) => {
         <p>${item.desc}</p>
       </div>
     </div> `}
-const buletsContainer = document.querySelector(".bulets");
-const buletCard = (_,i) =>{
-  return `<button class="w-4  h-4 rounded-full bg-white/50" onclick="activeSlide(${i})"></div>`}
-  const activeSlide = (idx) => {
-    testimonalsContainer.classList.add(`-translate-x-[${idx}00%]`)
-    console.log(testimonalsContainer);}
-    // Testimonials 
+    const buletsContainer = document.querySelector(".bulets");
+    const buletCard = (_,i) =>{
+      return `<button class="w-4  h-4 rounded-full bg-white/50" onclick="activeSlide(${i})"></div>`}
+      let slideIndex = 0;
+      const activeSlide = (idx) => {
+        testimonalsContainer.style.transform = `translateX(-${idx}00%)`};
+      const movingSlides = () =>{
+       slideIndex = (slideIndex+1) % testimonals.length;
+        testimonalsContainer.style.transform = `translateX(-${slideIndex}00%)`}
+      setInterval(movingSlides,3000)
+        // Testimonials 
 
     // CONTACT //
 let ContactContainar = document.querySelector(".contact-us");
