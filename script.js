@@ -4,7 +4,6 @@ document.getElementById("nav-btn").addEventListener("click", function () {
   nav.classList.toggle("h-[260px]");
 });
 // NAV //
-
 // HEADER //
 let text = document.querySelector(".text");
 let words = ["Web Developer", "Responsive Expert"];
@@ -54,8 +53,50 @@ const progressRow = (item) => {
 `;
 };
 // PROGRESS-BAR //
-
-
+// SERVICES CARDS //
+let servicesContainer = document.querySelector(".Services-cards");
+let cardData = [
+  {
+    icon: "https://icon.icepanel.io/Technology/svg/HTML5.svg",
+    head: "Html",
+    p: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
+  },
+  {
+    icon: "https://icon.icepanel.io/Technology/svg/CSS3.svg",
+    head: "Css",
+    p: "Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.",
+  },
+  {
+    icon: "https://icon.icepanel.io/Technology/svg/Bootstrap.svg",
+    head: "BootStrap",
+    p: "Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.",
+  },
+  {
+    icon: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    head: "Tailwind",
+    p: "Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.",
+  },
+  {
+    icon: "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    head: "JavaScript",
+    p: "Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.",
+  },
+  {
+    icon: "",
+    head: "Dolori Architecto",
+    p: "Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.",
+  },
+];
+const servicesCard = (item) => {
+  return `
+    <div class=" shadow-lg shadow-gray-300/100 rounded-2xl flex flex-col gap-4 px-8 py-16 cursor-pointer">  
+    <img src="${item.icon}" class="w-16 h-16" alt="">
+    </span>
+      <h2 class="text-2xl font-semibold mb-2">${item.head}</h2>
+      <p class="text-gray-700">${item.p}</p>
+  </div>`;
+};
+// SERVICES CARDS //
 ////////////////
 let progressContainer = document.querySelector(".progress-sec");
 let progressCards = [
@@ -72,42 +113,13 @@ const progressCard = (item) => {
     </div>`;
 };
 ////////////////
-
-// CONTACT //
-let ContactContainar = document.querySelector(".contact-us");
-let ContactCards = [
-  {
-    i: "fa-location-dot",
-    h1: "Address",
-    p: "Railway Traffic Colony House No#227-B Naya Pull Hyderabad",
-  },
-  { i: "fa-phone", h1: "Call Us", p: "03493225710" },
-  { i: "fa-envelope", h1: "Email Us", p: "hussainsaadain@gmail.com" },
-];
-const ContactCard = (item) => {
-  return `  <div class="flex items-center gap-3 same group ">
-  <a href="">
-    <i class="fa-solid ${item.i} w-[56px] h-[56px] text-[20px] border flex items-center justify-center rounded-full text-blue-600 border-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white"></i>
-  </a>
-  <div>
-    <h1 class="text-xl font-semibold">${item.h1}</h1>
-    <p>${item.p}</p>
-  </div>
-</div>`;
-};
-// CONTACT //
-
-
-
 // MAIN FUNCATION //
 const renderData = (data, container, fun) => {
-  container.innerHTML = `${data.map(fun).join("")}`;
-};
+  container.innerHTML = `${data.map(fun).join("")}`;};
 // MAIN FUNCATION //
-
 // FUNCATION CALL //
 renderData(barData, progressbarContainer, progressRow);
+renderData(cardData, servicesContainer, servicesCard);
 renderData(progressCards, progressContainer, progressCard);
-renderData(ContactCards, ContactContainar, ContactCard);
 // FUNCATION CALL //
 
