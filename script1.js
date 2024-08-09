@@ -226,7 +226,7 @@ const testimonalsContainer = document.querySelector(".slider");
 const testimonalSlideCard = (item) => {
   return `  
     <div class="slide w-full h-full flex justify-center items-center shrink-0 ">
-        <div class="slider-card w-[50%] flex justify-center items-center flex-col gap-5 text-center text-white">
+        <div class="slider-card w-full md:w-[70%] flex justify-center items-center flex-col gap-3 md:gap-5 px-5 text-center text-white">
           <div class="w-20 h-20 object-cover rounded-full overflow-hidden">
             <img src="${item.img}" alt="">
         </div>
