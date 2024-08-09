@@ -1,0 +1,79 @@
+header {
+  background-image: url(https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: whitesmoke;
+  transition: all 0.5s;
+}
+li a:hover::after {
+  width: 100%;
+}
+
+.resume-content {
+  position: relative;
+}
+.resume-content::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: whitesmoke;
+  border: 1px solid #0078ff;
+}
+
+.progress-section {
+  background-image: linear-gradient(
+      rgba(16, 116, 231, 0.514),
+      rgba(25, 113, 228, 0.459)
+    ),
+    url(https://bootstrapmade.com/demo/templates/DevFolio/assets/img/stats-bg.jpg);
+}
+
+.portfolioCard {
+  transform: scale(0);
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.portfolioCard.active-image {
+  position: relative;
+  transform: scale(1);
+  opacity: 1;
+}
+.portfolioCard:hover .ch {
+  opacity: 1;
+  bottom: 24px;
+}
+.lightBox.active {
+  opacity: 1;
+  z-index: 11
+}
+.imgBox.active{
+    transform: scale(1);
+}
+.slider-main{
+  background-image: linear-gradient(
+    rgba(16, 116, 231, 0.514),
+    rgba(25, 113, 228, 0.459)
+  ),
+  url(https://bootstrapmade.com/demo/templates/DevFolio/assets/img/testimonials-bg.jpg);
+}
+@media (min-width: 510px) {
+  section .profile {
+    flex-direction: row;
+  }
+}
+
+
+
+
+

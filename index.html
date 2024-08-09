@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Css file -->
+  <link rel="stylesheet" href="./style.css" />
+  <!-- <link rel="stylesheet" href="./Base.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Saadain Developer</title>
+</head>
+<body>
+  <!-- Light Box -->
+  <div class="lightBox w-full h-full fixed top-0 left-0 bg-[rgb(0,0,0,0.9)] opacity-0 -z-10 duration-300">
+    <button onclick="toggleLightBox()"
+      class="md:text-white text-black absolute z-10 right-5 w-10 h-10 rounded-lg md:bg-gray-600  md:hover:bg-gray-800 duration-300 text-4xl top-5 flex justify-center items-center">
+      <i class="fa-solid fa-xmark text-2xl"></i>
+    </button>
+    <button onclick="prevSlide()"
+      class="lightbox-btn md:text-white text-black absolute z-10 left-5 rounded-lg md:bg-gray-600 px-3 py-1 md:hover:bg-gray-800 duration-300 text-3xl top-1/2 -translate-1/2">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button onclick="nextSlide(this)"
+      class="lightbox-btn md:text-white text-black absolute z-10 right-5 text-3xl rounded-lg md:bg-gray-600 px-3 py-1 top-1/2 -translate-1/2 md:hover:bg-gray-800 duration-300">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="max-w-[700px] w-[100%] h-full duration-300 scale-0 delay-75 mx-auto bg-white imgBox">
+      <img src="" alt="" class="w-full h-[88%] object-cover" />
+      <p class="text-xl font-[400] p-5">Picture</p>
+    </div>
+  </div>
+  <!-- Light Box -->
+  <!-- NAV -->
+  <nav
+    class="flex justify-between items-center flex-wrap px-[5vw] lg:px-[8vw] py-7 bg-black text-white w-full sticky top-0 z-10">
+    <a href="#" class="logo text-3xl font-bold">Saadain-Dev</a>
+    <button class="lg:hidden text-2xl cursor-pointer" id="nav-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div
+      class="w-full lg:static absolute top-20 bg-black left-0 px-[5vw] lg:px-0  lg:h-auto  lg:block lg:w-auto h-0 overflow-hidden duration-500"
+      id="nav">
+      <ul class="flex flex-col lg:items-center lg:flex-row gap-4 pt-5 lg:pt-0 lg:gap-8 text-lg">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAV -->
+  <!-- HERO SECTION -->
+  <header
+    class="h-[80vh] md:h-[100vh] flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center gap-5 text-white font-semibold">
+    <h1 class=" text-3xl lg:text-6xl">I am Saadain Shaikh</h1>
+    <h1 class="text text-2xl lg:text-4xl h-20"></h1>
+  </header>
+  <!-- HERO SECTION -->
+  <!-- ABOUT SECTION -->
+  <section class="w-full max-w-6xl mx-auto px-4 py-8 mt-16 shadow-2xl">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="flex flex-col gap-8">
+        <div class="profile flex flex-col gap-8 items-center justify-center">
+          <div class="img w-[200px] h-[230px]">
+            <img class="w-full h-full object-cover  rounded-lg"
+              src="https://scontent.fhdd1-1.fna.fbcdn.net/v/t39.30808-6/394304311_1041648527151971_5086313831415202644_n.jpg?stp=dst-jpg_p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XqHKQRNPpQgQ7kNvgHduD_W&_nc_ht=scontent.fhdd1-1.fna&gid=AqXvUXIQC0VcoeuT19xWHNV&oh=00_AYCwAEQR6VDHfh1fwZ1YEiLFufWznC3b6OdGCRi1PV1rLw&oe=66B14C7D"
+              alt="">
+          </div>
+          <div class="details flex flex-col gap-3 text-gray-700">
+            <p class="text-md">Name: Saadain Shaikh</p>
+            <p class="text-md ">Profile: Full Stack Develope</p>
+            <p class="text-md ">Email: hussainsaadain@gmail.com</p>
+            <p class="text-md ">Phone: 03493225710</p>
+          </div>
+        </div>
+        <div class="skills flex flex-col gap-3 text-gray-500">
+          <h1 class="text-lg font-semibold text-black">Skills</h1>
+          <div class="bar flex flex-col gap-3">
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col p-3 text-[17px] gap-8 text-gray-500">
+        <h1 class="text-3xl font-semibold mb-4 text-black"><span class="border-b-4 border-blue-600">About</span> Me</h1>
+        <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet
+          et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor
+          accumsan tincidunt.</p>
+        <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor
+          volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Porttitor at sem.</p>
+        <p>Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla
+          porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT SECTION -->
+  <!-- RESUME SECTION -->
+  <section class=" mt-20 flex flex-col items-center gap-5 px-[2vw] w-full max-w-6xl mx-auto">
+    <span class="text-center text-4xl font-semibold border-b-4 border-blue-500 h-[60px]">Resume</span>
+    <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h1 class="text-2xl font-bold">Summary</h1>
+            <div class="resume-content border-l-2 border-blue-500 pl-4">
+              <h2 class="text-xl font-bold">Brandon Johnson</h2>
+              <p class="mt-2 leading-relaxed">
+                Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing
+                user-centered digital/print marketing material from initial concept to final, polished deliverable.
+              </p>
+              <ul class="mt-4 space-y-2">
+                <li>Portland par 127, Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h1 class="text-2xl font-bold">Education</h1>
+            <div class="resume-content border-l-2 border-blue-500 pl-4">
+              <h2 class="text-xl font-bold">Master of Fine Arts & Graphic Design</h2>
+              <h4 class="mt-2">2015 - 2016</h4>
+              <p class="leading-relaxed">
+                Rochester Institute of Technology, Rochester, NY<br />
+                Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
+                ut dignissimos deleniti nerada porti sand markend
+              </p>
+            </div>
+            <div class="resume-content border-l-2 border-blue-500 pl-4">
+              <h2 class="text-xl font-bold">Bachelor of Fine Arts & Graphic Design</h2>
+              <h4 class="mt-2">2010 - 2014</h4>
+              <p class="leading-relaxed">
+                Rochester Institute of Technology, Rochester, NY<br />
+                Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
+                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
+                dila
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="space-y-8">
+          <div class=" flex flex-col gap-5">
+            <h1 class="text-2xl font-bold">Professional Experience</h1>
+            <div class="resume-content border-l-2 border-blue-500 pl-4">
+              <h2 class="text-xl font-bold">Senior graphic design specialist</h2>
+              <h4 class="mt-2">2019 - Present</h4>
+              <p class="leading-relaxed">Experion, New York, NY</p>
+              <ul class="list-disc pl-4">
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production
+                  communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the
+                  project.</li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
+                  design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-content border-l-2 border-blue-500 pl-4 ">
+              <h2 class="text-xl font-bold">Graphic design specialist</h2>
+              <h4 class="mt-2">2017 - 2018</h4>
+              <p class="leading-relaxed">Stepping Stone Advertising, New York, NY</p>
+              <ul class="list-disc pl-4">
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
+                  advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  <!-- RESUME SECTION -->
+  <!-- SERVICES SECTION -->
+  <div class="mt-20 flex flex-col items-center gap-5">
+    <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Services</span>
+    <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <div
+      class=" Services-cards grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto px-3 md:px-[2vw] mt-5">
+    </div>
+  </div>
+  <!-- SERVICES SECTION -->
+  <!-- PROGRESS SECTION -->
+  <div
+    class="bg-white h-[90vh] md:h-[60vh] my-20 flex items-center progress-section bg-cover bg-no-repeat bg-center py-20">
+    <div
+      class=" progress-sec px-[2vw] w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-8 md:gap-0 font-semibold items-center text-white">
+    </div>
+  </div>
+  <!-- PROGRESS SECTION -->
+  <!-- POTFOIO SECTION -->
+  <div class="mt-20 flex flex-col items-center gap-10">
+    <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Portfolio</span>
+    <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <div class="gallery-control flex gap-2 md:gap-5 font-semibold text-md md:text-lg">
+    </div>
+    <div class=" portrait-card grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto px-3 md:px-[2vw] mt-5">
+    </div>
+  </div>
+  <!-- POTFOIO SECTION -->
+  <!-- FAQS SECTION -->
+  <div class="mt-20 flex flex-col items-center gap-10">
+    <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Pricing</span>
+    <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <div class="w-full max-w-6xl mx-auto px-3 md:px-[2vw] flex justify-center items-center flex-col gap-20 mt-10">
+      <div class="grid md:grid-cols-2 gap-8 w-full Pricing"></div>
+      <div class=" flex flex-col lg:flex-row gap-10">
+        <div class=" lg:w-[55%]">
+          <div class="flex lg:flex-col">
+            <h1 class="text-[40px] lg:text-5xl font-light">Frequently</h1>
+            <h1 class="text-[40px] lg:text-5xl font-light">Asked </h1>
+          </div>
+          <h1 class="text-[40px] lg:text-5xl">Questions</h1>
+          <p class="text-gray-500 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit </p>
+        </div>
+        <div class="faqs flex flex-col gap-6 grow">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FAQS SECTION -->
+  <!-- SLIDER -->
+  <div class="slider-main w-full h-[60vh] my-20 bg-center bg-cover bg-no-repeat overflow-hidden">
+    <div class="slide w-full h-full">
+    </div>
+  </div>
+  <!-- SLIDER -->
+  <!-- CONTACT -->
+  <div class="mt-20 flex flex-col items-center gap-5 px-2">
+    <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Contact</span>
+    <p class="text-center">To contact me, please use the number or email provided below.</p>
+    <div
+      class=" flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between contact-us py-8 lg:pe-32 px-[2vw] w-full max-w-6xl mx-auto shadow-lg shadow-gray-300/100">
+    </div>
+  </div>
+  <form class="form flex flex-col gap-6 mt-10 px-[2vw] py-5 w-full max-w-6xl mx-auto shadow-lg shadow-gray-300/100">
+    <div class="flex flex-col md:flex-row justify-center gap-5">
+      <input type="text" name="" id="" class="border w-full p-2" placeholder="Name">
+      <input type="text" name="" id="" class="border w-full p-2" placeholder="Email">
+    </div>
+    <input type="text" class="border w-full p-2" placeholder="Subject">
+    <textarea name="" id="" class="border p-2 h-40" placeholder="Massage"></textarea>
+    <button class="py-3 px-8 bg-blue-600 w-fit mx-auto rounded-3xl text-white">Send Message</button>
+  </form>
+  <!-- CONTACT -->
+  <!-- FOOTER -->
+  <footer class="flex flex-col bg-blue-600 items-center justify-center py-10 mt-20 gap-5 text-white">
+    <p>© Copyright <span class="font-bold">DevFolio </span> All Rights Reserved</p>
+    <div class="icon flex gap-3 footer-icons">
+    </div>
+    <p>Designed by <span class="text-gray-300">TailwindMade</span></p>
+
+  </footer>
+  <!-- FOOTER -->
+  <!-- Script file -->
+  <script src="./script.js"></script>
+  <script src="./script1.js"></script>
+</body>
+
+</html>
