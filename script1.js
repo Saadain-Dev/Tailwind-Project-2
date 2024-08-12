@@ -1,22 +1,33 @@
-
 // FILTER Btn //
 const btnContainer = document.querySelector(".gallery-control");
 const btns = ["All", "App", "Product", "Branding", "Books"];
 const btn = (item) => {
-  return `<button class="hover:text-blue-700 transition duration-600 ${item == "All" && "text-blue-500"}" id="${item}">${item}</button>`;};
+  return `<button class="hover:text-blue-700 transition duration-600 ${
+    item == "All" && "text-blue-500"
+  }" id="${item}">${item}</button>`;
+};
 
 btnContainer.addEventListener("click", (e) => {
   if (e.target.tagName == "BUTTON") {
     for (let btn of btnContainer.children) {
-      btn.classList.remove("text-blue-500");}
+      btn.classList.remove("text-blue-500");
+    }
     e.target.classList.add("text-blue-500");
     filterImages("");
-    setTimeout(() => filterImages(e.target.id), 100);}});
+    setTimeout(() => filterImages(e.target.id), 100);
+  }
+});
 
 const filterImages = (cat) => {
   for (let pCard of PortfolioContainer.children) {
-    pCard.classList[cat == pCard.id || cat == "All" ? "add" : "remove"]("active-image");}};
-const openLightBox = (e) => {console.log(e);};
+    pCard.classList[cat == pCard.id || cat == "All" ? "add" : "remove"](
+      "active-image"
+    );
+  }
+};
+const openLightBox = (e) => {
+  console.log(e);
+};
 // FILTER Btn //
 // Portfolio CARDS //
 let PortfolioContainer = document.querySelector(".portrait-card");
@@ -35,7 +46,9 @@ const projects = [
       {
         img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/app-3.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },],},
+      },
+    ],
+  },
   {
     cat: "Product",
     data: [
@@ -50,7 +63,9 @@ const projects = [
       {
         img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/product-3.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },],},
+      },
+    ],
+  },
   {
     cat: "Branding",
     data: [
@@ -65,7 +80,9 @@ const projects = [
       {
         img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/branding-3.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },],},
+      },
+    ],
+  },
   {
     cat: "Books",
     data: [
@@ -80,14 +97,18 @@ const projects = [
       {
         img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/books-3.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },],},];
+      },
+    ],
+  },
+];
 
 const PortfolioCards = projects.flatMap((project) =>
   project.data.map((item, idx) => ({
     ...item,
     title: `${project.cat} ${idx + 1}`,
     index: idx,
-})));
+  }))
+);
 const portfolioCard = (item) => {
   const cardCat = item.title.split(" ")[0];
   return `
@@ -103,7 +124,8 @@ const portfolioCard = (item) => {
             <a href="#"><i class="fa-solid fa-share text-2xl"></i></a>
           </div>
         </div>
-      </div>`;};
+      </div>`;
+};
 // Portfolio CARDS //
 // lightBox //
 let findSelectedObj;
@@ -140,87 +162,107 @@ const nextSlide = () => {
 
 const handleSliderBtns = (index) => {
   btn1.classList[index == 0 ? "add" : "remove"]("hidden");
-  btn2.classList[index == findSelectedObj.data.length - 1 ? "add" : "remove"]("hidden");};
+  btn2.classList[index == findSelectedObj.data.length - 1 ? "add" : "remove"](
+    "hidden"
+  );
+};
 
 window.addEventListener("keyup", (e) => {
   if (imgIndex != null) {
     if (e.key == "ArrowLeft" && imgIndex > 0) {
       prevSlide();
-    } else if (e.key == "ArrowRight" && imgIndex < findSelectedObj.data.length - 1) {nextSlide();}}});
+    } else if (
+      e.key == "ArrowRight" &&
+      imgIndex < findSelectedObj.data.length - 1
+    ) {
+      nextSlide();
+    }
+  }
+});
 // lightBox //
 // pricingContainer //
 const pricingContainer = document.querySelector(".Pricing");
 const pricingData = [
-  {head:"Portrait Photography",price:"$160.00"},
-  {head:"Fashion Photography",price:"$300.00"},
-  {head:"Sports Photography",price:"$200.00"},
-  {head:"Still Life Photography",price:"$120.00"},
-  {head:"Wedding Photography",price:"$500.00"},
-  {head:"Photojournalism",price:"$200.00"},]
-  const pricingCard = (item,i) =>{
-        return `
+  { head: "Portrait Photography", price: "$160.00" },
+  { head: "Fashion Photography", price: "$300.00" },
+  { head: "Sports Photography", price: "$200.00" },
+  { head: "Still Life Photography", price: "$120.00" },
+  { head: "Wedding Photography", price: "$500.00" },
+  { head: "Photojournalism", price: "$200.00" },
+];
+const pricingCard = (item, i) => {
+  return `
            <div class="flex justify-between text-xl md:text-2xl border-b-2 border-gray-300 border-dashed pb-3">
           <h1>${item.head}</h1>
           <h1 class="text-xl text-blue-600">${item.price}</h1>
-        </div>`}
+        </div>`;
+};
 // pricingContainer //
 // Faqs //
-  const faqsContainer = document.querySelector(".faqs");
-  const faqsData = [
-    {
-      title:"Non consectetur a erat nam at lectus urna duis?",
-      desc:"Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectu.",
-    },
-    {
-      title:"Non consectetur a erat nam at lectus urna duis?",
-      desc:"Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
-    },
-    {
-      title:"Non consectetur a erat nam at lectus urna duis?",
-      desc:"Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
-    },
-    {
-      title:"Non consectetur a erat nam at lectus urna duis?",
-      desc:"Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
-    },
-  ]
-    const faqCard = (item,i) =>{
-        return `
+const faqsContainer = document.querySelector(".faqs");
+const faqsData = [
+  {
+    title: "Non consectetur a erat nam at lectus urna duis?",
+    desc: "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectu.",
+  },
+  {
+    title: "Non consectetur a erat nam at lectus urna duis?",
+    desc: "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+  },
+  {
+    title: "Non consectetur a erat nam at lectus urna duis?",
+    desc: "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+  },
+  {
+    title: "Non consectetur a erat nam at lectus urna duis?",
+    desc: "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+  },
+];
+const faqCard = (item, i) => {
+  return `
         <div class="faqCard border flex flex-col gap-3 px-1 md:px-3 pt-3 ">
-      <button class="${i == 0 && "text-blue-600"} duration-500 text-[11px] sm:text-md lg:text-lg hover:text-blue-600 flex justify-between items-center gap-5 lg:gap-0 w-full" onclick="toggleFaq(this)">
-        <h1>${i+1}. ${item.title}</h1>
-        <i class="fa-solid fa-angle-right icon duration-500 ${i == 0 && "rotate-90"}"></i>
+      <button class="${
+        i == 0 && "text-blue-600"
+      } duration-500 text-[11px] sm:text-md lg:text-lg hover:text-blue-600 flex justify-between items-center gap-5 lg:gap-0 w-full" onclick="toggleFaq(this)">
+        <h1>${i + 1}. ${item.title}</h1>
+        <i class="fa-solid fa-angle-right icon duration-500 ${
+          i == 0 && "rotate-90"
+        }"></i>
       </button>
-      <div class="faqDiv overflow-y-auto  h-0 ${i == 0 && "h-[75px]"}  duration-500 text-[11px] md:text-md lg:text-lg" id="nav">
+      <div class="faqDiv overflow-y-auto  h-0 ${
+        i == 0 && "h-[75px]"
+      }  duration-500 text-[11px] md:text-md lg:text-lg" id="nav">
         ${item.desc}
       </div>
-    </div>`}
-    const toggleFaq = (e) => {
-     e.classList.toggle("text-blue-600")
-     e.children[1].classList.toggle("rotate-90")
-     e.nextElementSibling.classList.toggle("h-[75px]")
-    }
+    </div>`;
+};
+const toggleFaq = (e) => {
+  e.classList.toggle("text-blue-600");
+  e.children[1].classList.toggle("rotate-90");
+  e.nextElementSibling.classList.toggle("h-[75px]");
+};
 // Faqs//
-// Testimonials 
+// Testimonials
 const testimonals = [
   {
-name:"Saadain Shaikh",
-work:"Developer",
-desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
-img:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
-},
+    name: "Saadain Shaikh",
+    work: "Developer",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
+    img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+  },
   {
-name:"Babar Shaikh",
-work:"Engineer",
-desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
-img:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
-},
+    name: "Babar Shaikh",
+    work: "Engineer",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
+    img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+  },
   {
-name:"Alina Shaikh",
-work:"Developer",
-desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
-img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
-},]
+    name: "Alina Shaikh",
+    work: "Developer",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+  },
+];
 
 const testimonalsContainer = document.querySelector(".slider");
 const testimonalSlideCard = (item) => {
@@ -243,20 +285,55 @@ const testimonalSlideCard = (item) => {
         </div>
         <p>${item.desc}</p>
       </div>
-    </div> `}
-    const buletsContainer = document.querySelector(".bulets");
-    const buletCard = (_,i) =>{
-      return `<button class="w-4  h-4 rounded-full bg-white/50" onclick="activeSlide(${i})"></div>`}
-      let slideIndex = 0;
-      const activeSlide = (idx) => {
-        testimonalsContainer.style.transform = `translateX(-${idx}00%)`};
-      const movingSlides = () =>{
-       slideIndex = (slideIndex+1) % testimonals.length;
-        testimonalsContainer.style.transform = `translateX(-${slideIndex}00%)`}
-      setInterval(movingSlides,3000)
-        // Testimonials 
+    </div> `;
+};
 
-    // CONTACT //
+const buletsContainer = document.querySelector(".bulets");
+const buletCard = (_, i) => {
+  return `<button class="w-4 h-4 rounded-full ${
+    i === slideIndex ? "bg-white" : "bg-white/50"
+  }" onclick="activeSlide(${i})"></button>`;
+};
+let buletsList = buletsContainer.children;
+let slideIndex = 0;
+const activeSlide = (idx) => {
+  for (let btn of buletsList) {
+    btn.classList.remove("bg-white");
+    btn.classList.add("bg-white/50");
+  }
+  testimonalsContainer.style.transform = `translateX(-${idx}00%)`;
+  buletsList[idx].classList.remove("bg-white/50");
+  buletsList[idx].classList.add("bg-white");
+};
+
+const movingSlides = () => {
+  slideIndex = (slideIndex + 1) % testimonals.length;
+  testimonalsContainer.style.transform = `translateX(-${slideIndex}00%)`;
+  for (let btn of buletsList) {
+    btn.classList.add("bg-white/50");
+    btn.classList.remove("bg-white");
+  }
+  buletsList[slideIndex].classList.remove("bg-white/50");
+  buletsList[slideIndex].classList.add("bg-white");
+};
+let timer;
+
+timer = setInterval(movingSlides, 3000);
+
+
+
+
+
+testimonalsContainer.parentNode.addEventListener("mouseover",()=>{
+  clearInterval(timer);
+})
+testimonalsContainer.parentNode.addEventListener("mouseout",()=>{
+  timer = setInterval(movingSlides, 3000)
+})
+
+// Testimonials
+
+// CONTACT //
 let ContactContainar = document.querySelector(".contact-us");
 let ContactCards = [
   {
@@ -300,17 +377,18 @@ const footerIcons = [
   },
 ];
 const icon = (item) => {
-  return `<a href="${item.path}" class="border px-2 py-1 rounded-full text-xl  hover:text-gray-900 hover:bg-gray-200 transition-colors duration-300"><i class="fa-brands ${item.icon}"></i></a>`;};
+  return `<a href="${item.path}" class="border px-2 py-1 rounded-full text-xl  hover:text-gray-900 hover:bg-gray-200 transition-colors duration-300"><i class="fa-brands ${item.icon}"></i></a>`;
+};
 // FOOTER ICON //
 
-    // FUNCATION CALL //
-    renderData(btns, btnContainer, btn);
-    renderData(PortfolioCards, PortfolioContainer, portfolioCard);
-    renderData(pricingData, pricingContainer, pricingCard);
-    renderData(faqsData,faqsContainer,faqCard);
-    renderData(testimonals, testimonalsContainer, testimonalSlideCard);
-    renderData(testimonals, buletsContainer, buletCard);
-    renderData(ContactCards, ContactContainar, ContactCard);
-    renderData(footerIcons, footerContainer, icon);
-    filterImages("All");
+// FUNCATION CALL //
+renderData(btns, btnContainer, btn);
+renderData(PortfolioCards, PortfolioContainer, portfolioCard);
+renderData(pricingData, pricingContainer, pricingCard);
+renderData(faqsData, faqsContainer, faqCard);
+renderData(testimonals, testimonalsContainer, testimonalSlideCard);
+renderData(testimonals, buletsContainer, buletCard);
+renderData(ContactCards, ContactContainar, ContactCard);
+renderData(footerIcons, footerContainer, icon);
+filterImages("All");
 // FUNCATION CALL //

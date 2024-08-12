@@ -109,9 +109,10 @@ const progressCard = (item) => {
   return `
    <div>
       <h1 class="text-[48px]">${item.num0}</h1>
-      <h1>${item.num1}</h1>
+      <h2>${item.num1}</h2>
     </div>`;
 };
+
 ////////////////
 // MAIN FUNCATION //
 const renderData = (data, container, fun) => {
