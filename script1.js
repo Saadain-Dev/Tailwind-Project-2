@@ -36,7 +36,7 @@ const projects = [
     cat: "App",
     data: [
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/app-1.jpg",
+        img: "./Picture/Mozilla Firefox 8_12_2024 10_04_53 AM.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
@@ -113,7 +113,7 @@ const portfolioCard = (item) => {
   const cardCat = item.title.split(" ")[0];
   return `
       <div class="shadow-lg shadow-gray-300/100 portfolioCard" id="${cardCat}">
-        <div href="#"><img src="${item.img}" alt="${item.title} image"></div>
+        <div href="#"><img src="${item.img}" class="w-full h-full bg-cover bg-no-repeat"></div>
         <div class="absolute bg-white bg-opacity-80 px-5 py-2 flex justify-between items-center ch bottom-0 left-3 right-3 transition-all duration-300 opacity-0">
           <div>
             <h4 class="font-semibold text-xl">${item.title}</h4>
@@ -305,7 +305,6 @@ const activeSlide = (idx) => {
   buletsList[idx].classList.remove("bg-white/50");
   buletsList[idx].classList.add("bg-white");
 };
-
 const movingSlides = () => {
   slideIndex = (slideIndex + 1) % testimonals.length;
   testimonalsContainer.style.transform = `translateX(-${slideIndex}00%)`;
@@ -317,20 +316,9 @@ const movingSlides = () => {
   buletsList[slideIndex].classList.add("bg-white");
 };
 let timer;
-
 timer = setInterval(movingSlides, 3000);
-
-
-
-
-
-testimonalsContainer.parentNode.addEventListener("mouseover",()=>{
-  clearInterval(timer);
-})
-testimonalsContainer.parentNode.addEventListener("mouseout",()=>{
-  timer = setInterval(movingSlides, 3000)
-})
-
+testimonalsContainer.parentNode.addEventListener("mouseover",()=>{clearInterval(timer);})
+testimonalsContainer.parentNode.addEventListener("mouseout",()=>{timer = setInterval(movingSlides, 3000)})
 // Testimonials
 
 // CONTACT //

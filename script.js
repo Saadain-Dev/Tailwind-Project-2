@@ -36,10 +36,10 @@ type();
 // PROGRESS-BAR //
 let progressbarContainer = document.querySelector(".bar");
 let barData = [
-  { h1: "Html/Css", h2: "100%" ,bg:"#fd1d1d"},
-  { h1: "BootStrap", h2: "80%" ,bg:"#6b03b1"},
-  { h1: "Tailwind", h2: "70%" ,bg:"#15b8d6"},
-  { h1: "JavaScript", h2: "40%" ,bg:"#ded509"},
+  { h1: "Html/Css", h2: "100%"},
+  { h1: "BootStrap", h2: "80%"},
+  { h1: "Tailwind", h2: "70%" },
+  { h1: "JavaScript", h2: "40%"},
 ];
 const progressRow = (item) => {
   return `
@@ -48,7 +48,7 @@ const progressRow = (item) => {
     <p>${item.h2}</p>
   </div>
   <div class="h-[10px] bg-gray-300 rounded-lg">
-    <div class="h-full rounded-lg" style="width: ${item.h2};background-color:${item.bg};"></div>
+    <div class="h-full rounded-lg bg-blue-600" style="width: ${item.h2};"></div>
   </div>
 `;
 };
