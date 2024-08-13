@@ -1,6 +1,6 @@
 // FILTER Btn //
 const btnContainer = document.querySelector(".gallery-control");
-const btns = ["All", "App", "Product", "Branding", "Books"];
+const btns = ["All", "Html/Css", "Bootstrap", "Tailwind"];
 const btn = (item) => {
   return `<button class="hover:text-blue-700 transition duration-600 ${
     item == "All" && "text-blue-500"
@@ -33,7 +33,7 @@ const openLightBox = (e) => {
 let PortfolioContainer = document.querySelector(".portrait-card");
 const projects = [
   {
-    cat: "App",
+    cat: "Html/Css",
     data: [
       {
         img: "./Pictures/Mozilla Firefox 8_12_2024 10_04_53 AM.png",
@@ -50,57 +50,41 @@ const projects = [
     ],
   },
   {
-    cat: "Product",
+    cat: "Bootstrap",
     data: [
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/product-1.jpg",
+        img: "https://colorlib.com/wp/wp-content/uploads/sites/2/docmed-free-template.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/product-2.jpg",
+        img: "https://colorlib.com/wp/wp-content/uploads/sites/2/ithost-free-template.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/product-3.jpg",
+        img: "https://colorlib.com/wp/wp-content/uploads/sites/2/marco-free-template.jpg",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
     ],
   },
   {
-    cat: "Branding",
+    cat: "Tailwind",
     data: [
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/branding-1.jpg",
+        img: "https://camo.githubusercontent.com/fa4b00c26acb4436482b3faacc55a4e5dbbb5dd4403432055d258eb4f35344fb/68747470733a2f2f7468656d6573626572672e73332e75732d656173742d322e616d617a6f6e6177732e636f6d2f7075626c69632f6769746875622f6c616e6477696e642f7468756d626e61696c2e706e67",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/branding-2.jpg",
+        img: "https://d1w019qw3bn26k.cloudfront.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbFVPIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3345893c1d3c286262199f6fb2f5969c971fb6fc/crator-cover.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/branding-3.jpg",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },
-    ],
-  },
-  {
-    cat: "Books",
-    data: [
-      {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/books-1.jpg",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },
-      {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/books-2.jpg",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
-      },
-      {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/books-3.jpg",
+        img: "https://d1w019qw3bn26k.cloudfront.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbzBDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ed5594dccda3939fd518b293460902bb7715b34e/tidy.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
     ],
   },
 ];
+
 
 const PortfolioCards = projects.flatMap((project) =>
   project.data.map((item, idx) => ({
@@ -113,7 +97,7 @@ const portfolioCard = (item) => {
   const cardCat = item.title.split(" ")[0];
   return `
       <div class="shadow-lg shadow-gray-300/100 portfolioCard" id="${cardCat}">
-        <div href="#"><img src="${item.img}" class="w-full h-full bg-cover bg-no-repeat"></div>
+        <div class="h-[250px]"><img src="${item.img}" class="w-full h-full bg-cover bg-no-repeat"></div>
         <div class="absolute bg-white bg-opacity-80 px-5 py-2 flex justify-between items-center ch bottom-0 left-3 right-3 transition-all duration-300 opacity-0">
           <div>
             <h4 class="font-semibold text-xl">${item.title}</h4>
@@ -248,7 +232,7 @@ const testimonals = [
     name: "Saadain Shaikh",
     work: "Developer",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, consequuntur. Alias quasi enim placeat natus! Dolores debitis architecto similique consequatur.",
-    img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+    img: "https://scontent.fkhi22-1.fna.fbcdn.net/v/t39.30808-6/394304311_1041648527151971_5086313831415202644_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aitrUPPUWdMQ7kNvgEfyimz&_nc_ht=scontent.fkhi22-1.fna&oh=00_AYCXjtIkdwsvAYkBu_Pgdx1aT32SQ5Jibt8WYdIZFiXdHA&oe=66C0E63D",
   },
   {
     name: "Babar Shaikh",

@@ -99,17 +99,17 @@ const servicesCard = (item) => {
 // SERVICES CARDS //
 ////////////////
 let progressContainer = document.querySelector(".progress-sec");
-let progressCards = [
-  { num0: "232", num1: "Client" },
-  { num0: "521", num1: "Project" },
-  { num0: "1453", num1: "Hours Of Support" },
-  { num0: "32", num1: "Awards" },
-];
+// let progressCards = [
+//   {  num1: "Client" },
+//   {  num1: "Project" },
+//   { num1: "Hours Of Support" },
+//   { num0: "32", num1: "Awards" },
+// ];
 const progressCard = (item) => {
   return `
    <div>
-      <h1 class="text-[48px]">${item.num0}</h1>
-      <h2>${item.num1}</h2>
+      <h1 class="text-[48px] counter">0</h1>
+      <h2>${item}</h2>
     </div>`;
 };
 
@@ -121,6 +121,21 @@ const renderData = (data, container, fun) => {
 // FUNCATION CALL //
 renderData(barData, progressbarContainer, progressRow);
 renderData(cardData, servicesContainer, servicesCard);
-renderData(progressCards, progressContainer, progressCard);
+renderData(["clients","project","hours of support","awards"], progressContainer,progressCard );
 // FUNCATION CALL //
 
+function startCounter(targets, tag) {
+  const counters = document.querySelectorAll(tag);
+    const step = 0.02;
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += step;
+        if (progress >= 1) {
+            progress = 1;
+            clearInterval(interval);
+        }
+        counters.forEach((el, i) => el.textContent = Math.round(progress * targets[i]));
+    }, 150);
+}
+
+startCounter([100,200,500,700], '.counter');
