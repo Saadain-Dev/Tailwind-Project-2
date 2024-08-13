@@ -36,7 +36,7 @@ const projects = [
     cat: "App",
     data: [
       {
-        img: "./Picture/Mozilla Firefox 8_12_2024 10_04_53 AM.png",
+        img: "./Pictures/Mozilla Firefox 8_12_2024 10_04_53 AM.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
@@ -327,8 +327,7 @@ let ContactCards = [
   {
     i: "fa-location-dot",
     h1: "Address",
-    p: "Railway Traffic Colony House No#227-B Naya Pull Hyderabad",
-  },
+    p: "Railway Traffic Colony House No#227-B Naya Pull Hyderabad",},
   { i: "fa-phone", h1: "Call Us", p: "03493225710" },
   { i: "fa-envelope", h1: "Email Us", p: "hussainsaadain@gmail.com" },
 ];
