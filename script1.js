@@ -36,15 +36,15 @@ const projects = [
     cat: "Html/Css",
     data: [
       {
-        img: "./Pictures/Mozilla Firefox 8_12_2024 10_04_53 AM.png",
+        img: "./Pictures/Html-Css-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/app-2.jpg",
+        img: "./Pictures/Html-Css-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://bootstrapmade.com/demo/templates/DevFolio/assets/img/portfolio/app-3.jpg",
+        img: "./Pictures/Html-Css-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
     ],
@@ -53,15 +53,15 @@ const projects = [
     cat: "Bootstrap",
     data: [
       {
-        img: "https://colorlib.com/wp/wp-content/uploads/sites/2/docmed-free-template.jpg",
+        img: "./Pictures/BootStrap-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://colorlib.com/wp/wp-content/uploads/sites/2/ithost-free-template.jpg",
+        img: "./Pictures/BootStrap-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://colorlib.com/wp/wp-content/uploads/sites/2/marco-free-template.jpg",
+        img: "./Pictures/BootStrap-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
     ],
@@ -70,15 +70,15 @@ const projects = [
     cat: "Tailwind",
     data: [
       {
-        img: "https://camo.githubusercontent.com/fa4b00c26acb4436482b3faacc55a4e5dbbb5dd4403432055d258eb4f35344fb/68747470733a2f2f7468656d6573626572672e73332e75732d656173742d322e616d617a6f6e6177732e636f6d2f7075626c69632f6769746875622f6c616e6477696e642f7468756d626e61696c2e706e67",
+        img: "./Pictures/Tailwind-2.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://d1w019qw3bn26k.cloudfront.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbFVPIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3345893c1d3c286262199f6fb2f5969c971fb6fc/crator-cover.png",
+        img: "./Pictures/Tailwind-1.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "https://d1w019qw3bn26k.cloudfront.net/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbzBDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ed5594dccda3939fd518b293460902bb7715b34e/tidy.png",
+        img: "./Pictures/Tailwind-2.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
     ],

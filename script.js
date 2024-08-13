@@ -99,12 +99,6 @@ const servicesCard = (item) => {
 // SERVICES CARDS //
 ////////////////
 let progressContainer = document.querySelector(".progress-sec");
-// let progressCards = [
-//   {  num1: "Client" },
-//   {  num1: "Project" },
-//   { num1: "Hours Of Support" },
-//   { num0: "32", num1: "Awards" },
-// ];
 const progressCard = (item) => {
   return `
    <div>
@@ -112,7 +106,6 @@ const progressCard = (item) => {
       <h2>${item}</h2>
     </div>`;
 };
-
 ////////////////
 // MAIN FUNCATION //
 const renderData = (data, container, fun) => {
@@ -137,5 +130,4 @@ function startCounter(targets, tag) {
         counters.forEach((el, i) => el.textContent = Math.round(progress * targets[i]));
     }, 150);
 }
-
 startCounter([100,200,500,700], '.counter');

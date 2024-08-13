@@ -18,9 +18,8 @@
 <body>
   <!-- Light Box -->
   <div class="lightBox w-full h-full fixed top-0 left-0 bg-[rgb(0,0,0,0.9)] opacity-0 -z-10 duration-300">
-
     <button onclick="toggleLightBox()"
-      class="md:text-white text-black absolute z-10 right-5 w-10 h-10 rounded-lg md:bg-gray-600  md:hover:bg-gray-800 duration-300 text-4xl top-5 flex justify-center items-center">
+      class="text-white  absolute z-10 right-5 w-10 h-10 rounded-lg md:bg-gray-600 md:hover:bg-gray-800 duration-300 text-4xl top-5 flex justify-center items-center">
       <i class="fa-solid fa-xmark text-2xl"></i>
     </button>
     <button onclick="prevSlide()"
@@ -32,9 +31,8 @@
       <i class="fa-solid fa-chevron-right"></i>
     </button>
 
-    <div class="max-w-[1200px] w-[100%] h-full duration-300 scale-0 delay-75 mx-auto bg-white imgBox">
-      <img src="" alt="" class="w-full h-[88%] object-cover" />
-      <p class="text-xl font-[400] p-5">Picture</p>
+    <div class="max-w-[1000px] w-[100%] h-full duration-300 scale-0 delay-75 mx-auto imgBox">
+      <img src="" alt="" class="w-full h-full object-contain" />
     </div>
   </div>
   <!-- Light Box -->
@@ -71,9 +69,7 @@
       <div class="flex flex-col gap-8">
         <div class="profile flex flex-col gap-8 items-center justify-center">
           <div class="img w-[200px] h-[230px]">
-            <img class="w-full h-full object-cover  rounded-lg"
-              src="https://scontent.fhdd1-1.fna.fbcdn.net/v/t39.30808-6/394304311_1041648527151971_5086313831415202644_n.jpg?stp=dst-jpg_p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XqHKQRNPpQgQ7kNvgHduD_W&_nc_ht=scontent.fhdd1-1.fna&gid=AqXvUXIQC0VcoeuT19xWHNV&oh=00_AYCwAEQR6VDHfh1fwZ1YEiLFufWznC3b6OdGCRi1PV1rLw&oe=66B14C7D"
-              alt="">
+            <img class="w-full h-full object-cover rounded-lg"src="./Pictures/Profile.jpg" alt=""> 
           </div>
           <div class="details flex flex-col gap-3 text-gray-700">
             <p class="text-md">Name: Saadain Shaikh</p>
@@ -263,7 +259,6 @@
     <div class="icon flex gap-3 footer-icons">
     </div>
     <p>Designed by <span class="text-gray-300">TailwindMade</span></p>
-
   </footer>
   <!-- FOOTER -->
   <!-- Script file -->
