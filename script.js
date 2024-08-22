@@ -82,8 +82,8 @@ let cardData = [
     p: "Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.",
   },
   {
-    icon: "",
-    head: "Dolori Architecto",
+    icon: "https://icon.icepanel.io/Technology/svg/React.svg",
+    head: "React",
     p: "Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.",
   },
 ];

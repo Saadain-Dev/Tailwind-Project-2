@@ -23,11 +23,11 @@
       <i class="fa-solid fa-xmark text-2xl"></i>
     </button>
     <button onclick="prevSlide()"
-      class="lightbox-btn md:text-white text-black absolute z-10 left-5 rounded-lg md:bg-gray-600 px-3 py-1 md:hover:bg-gray-800 duration-300 text-3xl top-1/2 -translate-1/2">
+      class="lightbox-btn md:text-white text-green-400 absolute z-10 left-5 rounded-lg md:bg-gray-600 px-3 py-1 md:hover:bg-gray-800 duration-300 text-3xl top-1/2 -translate-1/2">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
     <button onclick="nextSlide(this)"
-      class="lightbox-btn md:text-white text-black absolute z-10 right-5 text-3xl rounded-lg md:bg-gray-600 px-3 py-1 top-1/2 -translate-1/2 md:hover:bg-gray-800 duration-300">
+      class="lightbox-btn md:text-white text-green-400 absolute z-10 right-5 text-3xl rounded-lg md:bg-gray-600 px-3 py-1 top-1/2 -translate-1/2 md:hover:bg-gray-800 duration-300">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
 
@@ -48,10 +48,10 @@
       id="nav">
       <ul class="flex flex-col lg:items-center lg:flex-row gap-4 pt-5 lg:pt-0 lg:gap-8 text-lg">
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#1">About</a></li>
+        <li><a href="#2">Services</a></li>
+        <li><a href="#3">Portfolio</a></li>
+        <li><a href="#4">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -64,7 +64,7 @@
   </header>
   <!-- HERO SECTION -->
   <!-- ABOUT SECTION -->
-  <section class="w-full max-w-6xl mx-auto px-4 py-8 mt-16 shadow-2xl">
+  <section class="w-full max-w-6xl mx-auto px-4 py-8 mt-16 shadow-2xl" id="1">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="flex flex-col gap-8">
         <div class="profile flex flex-col gap-8 items-center justify-center">
@@ -180,7 +180,7 @@
   </section>
   <!-- RESUME SECTION -->
   <!-- SERVICES SECTION -->
-  <div class="mt-20 flex flex-col items-center gap-5">
+  <div class="mt-20 flex flex-col items-center gap-5" id="2">
     <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Services</span>
     <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     <div
@@ -190,14 +190,14 @@
   <!-- SERVICES SECTION -->
   <!-- PROGRESS SECTION -->
   <div
-    class="bg-white h-[90vh] md:h-[60vh] my-20 flex items-center progress-section bg-cover bg-no-repeat bg-center py-20">
+    class="bg-white h-[90vh] md:h-[60vh] my-20 flex items-center progress-section bg-cover bg-no-repeat bg-center py-20" id="3">
     <div
       class=" progress-sec px-[2vw] w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-8 md:gap-0 font-semibold items-center text-white">
     </div>
   </div>
   <!-- PROGRESS SECTION -->
   <!-- POTFOIO SECTION -->
-  <div class="mt-20 flex flex-col items-center gap-10">
+  <div class="mt-20 flex flex-col items-center gap-10" id="3">
     <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Portfolio</span>
     <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     <div class="gallery-control flex gap-2 md:gap-5 font-semibold text-md md:text-lg">
@@ -236,7 +236,7 @@
   </div>
   <!-- SLIDER -->
   <!-- CONTACT -->
-  <div class="mt-20 flex flex-col items-center gap-5 px-2">
+  <div class="mt-20 flex flex-col items-center gap-5 px-2" id="4">
     <span class="text-center text-4xl font-semibold border-b-4 border-blue-600 h-[60px]">Contact</span>
     <p class="text-center">To contact me, please use the number or email provided below.</p>
     <div
