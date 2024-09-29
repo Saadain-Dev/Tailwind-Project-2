@@ -37,16 +37,13 @@
   </div>
   <!-- Light Box -->
   <!-- NAV -->
-  <nav
-    class="flex justify-between items-center flex-wrap px-[5vw] lg:px-[8vw] py-7 bg-black text-white w-full sticky top-0 z-10">
+  <nav class="flex justify-between items-center flex-wrap  px-[5vw] lg:px-[8vw] py-7 bg-black text-white text-gray-700 w-full fixed z-10">
     <a href="#" class="logo text-3xl font-bold">Saadain-Dev</a>
     <button class="lg:hidden text-2xl cursor-pointer" id="nav-btn">
       <i class="fa-solid fa-bars"></i>
     </button>
-    <div
-      class="w-full lg:static absolute top-20 bg-black left-0 px-[5vw] lg:px-0  lg:h-auto  lg:block lg:w-auto h-0 overflow-hidden duration-500"
-      id="nav">
-      <ul class="flex flex-col lg:items-center lg:flex-row gap-4 pt-5 lg:pt-0 lg:gap-8 text-lg">
+    <div class="mobile-nav overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out lg:max-h-none w-full lg:block lg:w-auto" id="nav">
+      <ul class="flex flex-col lg:flex-row gap-4 pt-5 lg:pt-0 lg:gap-8 text-lg">
         <li><a href="#">Home</a></li>
         <li><a href="#1">About</a></li>
         <li><a href="#2">Services</a></li>

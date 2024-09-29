@@ -1,8 +1,10 @@
 // NAV //
-document.getElementById("nav-btn").addEventListener("click", function () {
-  var nav = document.getElementById("nav");
-  nav.classList.toggle("h-[260px]");
-});
+let navBtn = document.getElementById("nav-btn");
+let mobileNav = document.getElementById("nav");
+
+navBtn.onclick = () => {
+  mobileNav.style.maxHeight = mobileNav.style.maxHeight ? null : mobileNav.scrollHeight + "px";
+};
 // NAV //
 // HEADER //
 let text = document.querySelector(".text");
