@@ -78,7 +78,7 @@ const projects = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
       {
-        img: "./Pictures/Tailwind-2.png",
+        img: "./Pictures/My Services — Mozilla Firefox 10_13_2024 8_27_26 AM.png",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur!",
       },
     ],
